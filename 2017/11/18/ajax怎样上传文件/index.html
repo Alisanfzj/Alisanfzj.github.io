@@ -5,17 +5,17 @@
   
   <title>ajax怎样上传文件 | 南城菇凉@博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="今天就来聊聊怎样通过ajax上传文件吧。下面的例子是上传一张图片。实现该功能需要先引入jQuery插件 html部分代码：         js部分代码：    $(“#btn”).click(function(){        // 模拟表单对象        var formData = new FormData();        formData.append(“img”,$(“#fil">
+  <meta name="description" content="今天就来聊聊怎样通过ajax上传文件吧。 下面的例子是上传一张图片。 实现该功能需要先引入jQuery插件 html部分代码：    input type=”file” name=”img” id=”pic”/&amp;gt;    input type=”button” id=”btn” value=”上传”/&amp;gt; js部分代码：    $(“#btn”).click(function(){">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ajax怎样上传文件">
 <meta property="og:url" content="http://yoursite.com/2017/11/18/ajax怎样上传文件/index.html">
 <meta property="og:site_name" content="南城菇凉@博客">
-<meta property="og:description" content="今天就来聊聊怎样通过ajax上传文件吧。下面的例子是上传一张图片。实现该功能需要先引入jQuery插件 html部分代码：         js部分代码：    $(“#btn”).click(function(){        // 模拟表单对象        var formData = new FormData();        formData.append(“img”,$(“#fil">
+<meta property="og:description" content="今天就来聊聊怎样通过ajax上传文件吧。 下面的例子是上传一张图片。 实现该功能需要先引入jQuery插件 html部分代码：    input type=”file” name=”img” id=”pic”/&amp;gt;    input type=”button” id=”btn” value=”上传”/&amp;gt; js部分代码：    $(“#btn”).click(function(){">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-11-18T08:21:56.000Z">
+<meta property="og:updated_time" content="2017-11-18T08:26:25.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ajax怎样上传文件">
-<meta name="twitter:description" content="今天就来聊聊怎样通过ajax上传文件吧。下面的例子是上传一张图片。实现该功能需要先引入jQuery插件 html部分代码：         js部分代码：    $(“#btn”).click(function(){        // 模拟表单对象        var formData = new FormData();        formData.append(“img”,$(“#fil">
+<meta name="twitter:description" content="今天就来聊聊怎样通过ajax上传文件吧。 下面的例子是上传一张图片。 实现该功能需要先引入jQuery插件 html部分代码：    input type=”file” name=”img” id=”pic”/&amp;gt;    input type=”button” id=”btn” value=”上传”/&amp;gt; js部分代码：    $(“#btn”).click(function(){">
   
     <link rel="alternate" href="/atom.xml" title="南城菇凉@博客" type="application/atom+xml">
   
@@ -90,16 +90,18 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>今天就来聊聊怎样通过ajax上传文件吧。<br>下面的例子是上传一张图片。<br>实现该功能需要先引入jQuery插件</p>
-<p>html部分代码：<br>    <input type="file" name="img" id="pic"><br>    <input type="button" id="btn" value="上传"></p>
+        <p>今天就来聊聊怎样通过ajax上传文件吧。</p>
+<p>下面的例子是上传一张图片。</p>
+<p>实现该功能需要先引入jQuery插件</p>
+<p>html部分代码：<br>    input type=”file” name=”img” id=”pic”/&gt;<br>    input type=”button” id=”btn” value=”上传”/&gt;</p>
 <p>js部分代码：<br>    $(“#btn”).click(function(){<br>        // 模拟表单对象<br>        var formData = new FormData();<br>        formData.append(“img”,$(“#file”)[0].files[0]);//文件域，上传的是第一张图片<br>        $.ajax({<br>            url:”wenjian.php”,//url地址<br>            type:’post’, //提交方式<br>            data:formData,//提交的数据<br>            processData:false, //jquery是否对你的数据进行预处理<br>            contentType:false,//jquery不要自己修改请求内容类型<br>            dataType:”text”,//数据类型<br>            async:true,//是否异步，true为异步，false为同步<br>            // 成功时的回调函数<br>            success:function(data) {<br>                alert(“上传成功”);<br>            }<br>        });<br>    })</p>
-<p>php部分代码：<br>&lt;?php<br>if(!empty($_FILES)){<br>拷贝文件，tmp_name为临时路径，name为拷贝后的路径<br>        move_uploaded_file($_FILES[‘img’][‘tmp_name’],$_FILES[‘img’][‘name’]);<br>        echo $_FILES[‘img’][‘name’];<br>    }else{<br>        echo “error”;<br>    }<br>?&gt;</p>
+<p>php部分代码：<br>&lt;?php<br>if(!empty($_FILES)){<br>//拷贝文件，tmp_name为临时路径，name为拷贝后的路径<br>    move_uploaded_file($_FILES[‘img’][‘tmp_name’],$_FILES[‘img’][‘name’]);<br>    echo $_FILES[‘img’][‘name’];<br>}else{<br>    echo “error”;<br>}<br>?&gt;</p>
 <p>这样就能通过ajax完成一个简单上传文件的方法了。😊😊</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/11/18/ajax怎样上传文件/" data-id="cja52eub30000r04ndxjxout0" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/11/18/ajax怎样上传文件/" data-id="cja52km1n0000y84nvm0gk6sb" class="article-share-link">Share</a>
       
       
     </footer>
