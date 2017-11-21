@@ -91,19 +91,19 @@
         <p>CURD操作/增删改查</p>
 <p>1.插入语句：</p>
 <p>insert into 表名（表的字段1，表的字段2）values(字段1的值，字段2的值)；//字符串类型的加上引号</p>
-<p>如：</p>
+<p>如：<a href="http://upload-images.jianshu.io/upload_images/7426685-dc5bb72684910596.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/700" target="_blank" rel="external">http://upload-images.jianshu.io/upload_images/7426685-dc5bb72684910596.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/700</a></p>
 <p>2.删除语句：</p>
 <p>delete from 表名 where 条件//比如：<code>name</code> = <code>luxp</code></p>
-<p>如：</p>
+<p>如：<a href="http://upload-images.jianshu.io/upload_images/7426685-2971559ceae6da26.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/440" target="_blank" rel="external">http://upload-images.jianshu.io/upload_images/7426685-2971559ceae6da26.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/440</a></p>
 <p>3.修改语句：</p>
 <p>update 表名 set 字段1 = “值”，字段2 = “值” where 条件//比如： update student set age = 18 where name=’luxp’</p>
-<p>如：</p>
+<p>如：<a href="http://upload-images.jianshu.io/upload_images/7426685-5db0f012e83c3915.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/424" target="_blank" rel="external">http://upload-images.jianshu.io/upload_images/7426685-5db0f012e83c3915.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/424</a></p>
 <p>4.查询语句：</p>
 <p>(1).select 字段1，字段2.。。from 表名 where 条件</p>
 <p>limit 1:表示只查询记录中的一条</p>
 <p>limit 5:表示查询5条</p>
 <p>limit start,size 从第start位置查询size条</p>
-<p>如：</p>
+<p>如：<a href="http://upload-images.jianshu.io/upload_images/7426685-6ceb8595780c8636.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/354" target="_blank" rel="external">http://upload-images.jianshu.io/upload_images/7426685-6ceb8595780c8636.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/354</a></p>
 <p>(2).带查询限制的查询语句</p>
 <p>select 字段 from 表名 where 条件 limit start,size</p>
 <p>排序 order by</p>
@@ -111,30 +111,30 @@
 <p>asc 根据字段的值 升序</p>
 <p>(3).带排序的查询语句</p>
 <p>select 字段(*) from 表名 order by 字段 desc/asc  limit start,size</p>
-<p>如：</p>
+<p>如：<a href="http://upload-images.jianshu.io/upload_images/7426685-bd156e961dd5ddad.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/459" target="_blank" rel="external">http://upload-images.jianshu.io/upload_images/7426685-bd156e961dd5ddad.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/459</a></p>
 <p>(4).分组统计查询</p>
 <p>select count(*) from 表名 //获得所有行数</p>
 <p>select count(*) as num from 表名 //将count结果作为一个字段名检索</p>
-<p>如：</p>
+<p>如：<a href="http://upload-images.jianshu.io/upload_images/7426685-895e324a05d58e2d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/409" target="_blank" rel="external">http://upload-images.jianshu.io/upload_images/7426685-895e324a05d58e2d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/409</a></p>
 <p>(5).分组 ground by 字段名 根据某个字段进行分组查询</p>
 <p>//索引可以提高查询速度</p>
 <p>//索引会降低插入，修改速度</p>
-<p>如：</p>
+<p>如：<a href="http://upload-images.jianshu.io/upload_images/7426685-885e21d5c0b000b7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/398" target="_blank" rel="external">http://upload-images.jianshu.io/upload_images/7426685-885e21d5c0b000b7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/398</a></p>
 <p>(6).求和 sum()</p>
 <p>select sum(age) from student //求所有行数的age字段的总和</p>
-<p>如：</p>
+<p>如：<a href="http://upload-images.jianshu.io/upload_images/7426685-a6e4ee10499abff4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/321" target="_blank" rel="external">http://upload-images.jianshu.io/upload_images/7426685-a6e4ee10499abff4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/321</a></p>
 <p>(7).求平均值 avg()</p>
 <p>select avg(age) from student//求年龄的平均值</p>
-<p>如：</p>
+<p>如：<a href="http://upload-images.jianshu.io/upload_images/7426685-13189259c5651f11.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/392" target="_blank" rel="external">http://upload-images.jianshu.io/upload_images/7426685-13189259c5651f11.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/392</a></p>
 <p>(8).查最大值max()与最小值min()</p>
 <p>select max(age) from student</p>
 <p>select min(age) from student</p>
-<p>如：</p>
+<p>如：<a href="http://upload-images.jianshu.io/upload_images/7426685-89c24d210df1c4ea.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/360" target="_blank" rel="external">http://upload-images.jianshu.io/upload_images/7426685-89c24d210df1c4ea.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/360</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/11/21/SQL数据库的基本操作/" data-id="cja9mcvv200001g4n96c4o5yk" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/11/21/SQL数据库的基本操作/" data-id="cja9mi1rs0000b14nvudzpjrw" class="article-share-link">Share</a>
       
       
     </footer>
@@ -177,44 +177,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/11/18/ajax怎样上传文件/" data-id="cja9mcvv700011g4n6urpfklw" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-第一篇博客" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/11/18/第一篇博客/" class="article-date">
-  <time datetime="2017-11-18T07:58:09.000Z" itemprop="datePublished">2017-11-18</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/18/第一篇博客/">第一篇博客</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="第一篇博客"><a href="#第一篇博客" class="headerlink" title="第一篇博客"></a>第一篇博客</h2><p>从今天开始我的博客生涯了，😊😊</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/11/18/第一篇博客/" data-id="cja9mcvve00041g4nexlu4xh9" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/11/18/ajax怎样上传文件/" data-id="cja9mi1s00002b14n55haiub3" class="article-share-link">Share</a>
       
       
     </footer>
@@ -287,7 +250,7 @@ clear:both;
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/09/27/float浮动的基本知识/" data-id="cja9mcvvb00021g4nlsshwza0" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/09/27/float浮动的基本知识/" data-id="cja9mi1ry0001b14nwwm3ghel" class="article-share-link">Share</a>
       
       
     </footer>
@@ -332,7 +295,44 @@ clear:both;
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/09/11/hello-world/" data-id="cja9mcvvc00031g4n0atxvn1z" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/09/11/hello-world/" data-id="cja9mi1s20003b14nsbp3ukb1" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-第一篇博客" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/09/11/第一篇博客/" class="article-date">
+  <time datetime="2017-09-11T07:58:09.000Z" itemprop="datePublished">2017-09-11</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/09/11/第一篇博客/">第一篇博客</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="第一篇博客"><a href="#第一篇博客" class="headerlink" title="第一篇博客"></a>第一篇博客</h2><p>从今天开始我的博客生涯了，😊😊</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/09/11/第一篇博客/" data-id="cja9mi1s40004b14n8b0jmtp8" class="article-share-link">Share</a>
       
       
     </footer>
@@ -380,15 +380,15 @@ clear:both;
           </li>
         
           <li>
-            <a href="/2017/11/18/第一篇博客/">第一篇博客</a>
-          </li>
-        
-          <li>
             <a href="/2017/09/27/float浮动的基本知识/">float浮动的基本知识</a>
           </li>
         
           <li>
             <a href="/2017/09/11/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2017/09/11/第一篇博客/">第一篇博客</a>
           </li>
         
       </ul>
