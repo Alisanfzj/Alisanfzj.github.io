@@ -5,19 +5,27 @@
   
   <title>SQL数据库的基本操作 | 南城菇凉@博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="CURD操作/增删改查 1.插入语句： insert into 表名（表的字段1，表的字段2）values(字段1的值，字段2的值)；//字符串类型的加上引号 如：http://upload-images.jianshu.io/upload_images/7426685-dc5bb72684910596.png?imageMogr2/auto-orient/strip%7CimageView2/2">
+  <meta name="description" content="CURD操作/增删改查 1.插入语句： insert into 表名（表的字段1，表的字段2）values(字段1的值，字段2的值)；//字符串类型的加上引号 如： 2.删除语句： delete from 表名 where 条件//比如：name = luxp 如： 3.修改语句： update 表名 set 字段1 = “值”，字段2 = “值” where 条件//比如： update stu">
 <meta property="og:type" content="article">
 <meta property="og:title" content="SQL数据库的基本操作">
 <meta property="og:url" content="http://yoursite.com/2017/11/21/SQL数据库的基本操作/index.html">
 <meta property="og:site_name" content="南城菇凉@博客">
-<meta property="og:description" content="CURD操作/增删改查 1.插入语句： insert into 表名（表的字段1，表的字段2）values(字段1的值，字段2的值)；//字符串类型的加上引号 如：http://upload-images.jianshu.io/upload_images/7426685-dc5bb72684910596.png?imageMogr2/auto-orient/strip%7CimageView2/2">
+<meta property="og:description" content="CURD操作/增删改查 1.插入语句： insert into 表名（表的字段1，表的字段2）values(字段1的值，字段2的值)；//字符串类型的加上引号 如： 2.删除语句： delete from 表名 where 条件//比如：name = luxp 如： 3.修改语句： update 表名 set 字段1 = “值”，字段2 = “值” where 条件//比如： update stu">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/7426685-dc5bb72684910596.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/700">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/7426685-2971559ceae6da26.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/440">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/7426685-6ceb8595780c8636.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/354">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/7426685-bd156e961dd5ddad.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/459">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/7426685-895e324a05d58e2d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/409">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/7426685-885e21d5c0b000b7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/398">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/7426685-a6e4ee10499abff4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/321">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/7426685-13189259c5651f11.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/392">
-<meta property="og:updated_time" content="2017-11-21T13:00:25.000Z">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/7426685-89c24d210df1c4ea.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/360">
+<meta property="og:updated_time" content="2017-11-21T13:03:36.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SQL数据库的基本操作">
-<meta name="twitter:description" content="CURD操作/增删改查 1.插入语句： insert into 表名（表的字段1，表的字段2）values(字段1的值，字段2的值)；//字符串类型的加上引号 如：http://upload-images.jianshu.io/upload_images/7426685-dc5bb72684910596.png?imageMogr2/auto-orient/strip%7CimageView2/2">
-<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/7426685-13189259c5651f11.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/392">
+<meta name="twitter:description" content="CURD操作/增删改查 1.插入语句： insert into 表名（表的字段1，表的字段2）values(字段1的值，字段2的值)；//字符串类型的加上引号 如： 2.删除语句： delete from 表名 where 条件//比如：name = luxp 如： 3.修改语句： update 表名 set 字段1 = “值”，字段2 = “值” where 条件//比如： update stu">
+<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/7426685-dc5bb72684910596.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/700">
   
     <link rel="alternate" href="/atom.xml" title="南城菇凉@博客" type="application/atom+xml">
   
@@ -95,10 +103,10 @@
         <p>CURD操作/增删改查</p>
 <p>1.插入语句：</p>
 <p>insert into 表名（表的字段1，表的字段2）values(字段1的值，字段2的值)；//字符串类型的加上引号</p>
-<p>如：<a href="http://upload-images.jianshu.io/upload_images/7426685-dc5bb72684910596.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/700" target="_blank" rel="external">http://upload-images.jianshu.io/upload_images/7426685-dc5bb72684910596.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/700</a></p>
+<p>如：<img src="http://upload-images.jianshu.io/upload_images/7426685-dc5bb72684910596.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/700" alt="abc"></p>
 <p>2.删除语句：</p>
 <p>delete from 表名 where 条件//比如：<code>name</code> = <code>luxp</code></p>
-<p>如：<a href="http://upload-images.jianshu.io/upload_images/7426685-2971559ceae6da26.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/440" target="_blank" rel="external">http://upload-images.jianshu.io/upload_images/7426685-2971559ceae6da26.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/440</a></p>
+<p>如：<img src="http://upload-images.jianshu.io/upload_images/7426685-2971559ceae6da26.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/440" alt="abc"></p>
 <p>3.修改语句：</p>
 <p>update 表名 set 字段1 = “值”，字段2 = “值” where 条件//比如： update student set age = 18 where name=’luxp’</p>
 <p>如：<a href="http://upload-images.jianshu.io/upload_images/7426685-5db0f012e83c3915.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/424" target="_blank" rel="external">http://upload-images.jianshu.io/upload_images/7426685-5db0f012e83c3915.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/424</a></p>
@@ -107,7 +115,7 @@
 <p>limit 1:表示只查询记录中的一条</p>
 <p>limit 5:表示查询5条</p>
 <p>limit start,size 从第start位置查询size条</p>
-<p>如：<a href="http://upload-images.jianshu.io/upload_images/7426685-6ceb8595780c8636.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/354" target="_blank" rel="external">http://upload-images.jianshu.io/upload_images/7426685-6ceb8595780c8636.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/354</a></p>
+<p>如：<img src="http://upload-images.jianshu.io/upload_images/7426685-6ceb8595780c8636.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/354" alt="abc"></p>
 <p>(2).带查询限制的查询语句</p>
 <p>select 字段 from 表名 where 条件 limit start,size</p>
 <p>排序 order by</p>
@@ -115,30 +123,30 @@
 <p>asc 根据字段的值 升序</p>
 <p>(3).带排序的查询语句</p>
 <p>select 字段(*) from 表名 order by 字段 desc/asc  limit start,size</p>
-<p>如：<a href="http://upload-images.jianshu.io/upload_images/7426685-bd156e961dd5ddad.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/459" target="_blank" rel="external">http://upload-images.jianshu.io/upload_images/7426685-bd156e961dd5ddad.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/459</a></p>
+<p>如：<img src="http://upload-images.jianshu.io/upload_images/7426685-bd156e961dd5ddad.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/459" alt="abc"></p>
 <p>(4).分组统计查询</p>
 <p>select count(*) from 表名 //获得所有行数</p>
 <p>select count(*) as num from 表名 //将count结果作为一个字段名检索</p>
-<p>如：<a href="http://upload-images.jianshu.io/upload_images/7426685-895e324a05d58e2d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/409" target="_blank" rel="external">http://upload-images.jianshu.io/upload_images/7426685-895e324a05d58e2d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/409</a></p>
+<p>如：<img src="http://upload-images.jianshu.io/upload_images/7426685-895e324a05d58e2d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/409" alt="abc"></p>
 <p>(5).分组 ground by 字段名 根据某个字段进行分组查询</p>
 <p>//索引可以提高查询速度</p>
 <p>//索引会降低插入，修改速度</p>
-<p>如：<a href="http://upload-images.jianshu.io/upload_images/7426685-885e21d5c0b000b7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/398" target="_blank" rel="external">http://upload-images.jianshu.io/upload_images/7426685-885e21d5c0b000b7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/398</a></p>
+<p>如：<img src="http://upload-images.jianshu.io/upload_images/7426685-885e21d5c0b000b7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/398" alt="abc"></p>
 <p>(6).求和 sum()</p>
 <p>select sum(age) from student //求所有行数的age字段的总和</p>
-<p>如：<a href="http://upload-images.jianshu.io/upload_images/7426685-a6e4ee10499abff4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/321" target="_blank" rel="external">http://upload-images.jianshu.io/upload_images/7426685-a6e4ee10499abff4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/321</a></p>
+<p>如：<img src="http://upload-images.jianshu.io/upload_images/7426685-a6e4ee10499abff4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/321" alt="abc"></p>
 <p>(7).求平均值 avg()</p>
 <p>select avg(age) from student//求年龄的平均值</p>
 <p>如：<br><img src="http://upload-images.jianshu.io/upload_images/7426685-13189259c5651f11.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/392" alt="abc"></p>
 <p>(8).查最大值max()与最小值min()</p>
 <p>select max(age) from student</p>
 <p>select min(age) from student</p>
-<p>如：<a href="http://upload-images.jianshu.io/upload_images/7426685-89c24d210df1c4ea.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/360" target="_blank" rel="external">http://upload-images.jianshu.io/upload_images/7426685-89c24d210df1c4ea.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/360</a></p>
+<p>如：<img src="http://upload-images.jianshu.io/upload_images/7426685-89c24d210df1c4ea.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/360" alt="abc"></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/11/21/SQL数据库的基本操作/" data-id="cja9mokhd0000ji4n0xrcjumq" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/11/21/SQL数据库的基本操作/" data-id="cja9mtfua0000q94nzrh2rvey" class="article-share-link">Share</a>
       
       
     </footer>
