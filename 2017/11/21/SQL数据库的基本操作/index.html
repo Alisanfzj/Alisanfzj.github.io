@@ -5,14 +5,17 @@
   
   <title>SQL数据库的基本操作 | 南城菇凉@博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="article">
+  <meta name="description" content="CURD操作/增删改查 1.插入语句： insert into 表名（表的字段1，表的字段2）values(字段1的值，字段2的值)；//字符串类型的加上引号 如： 2.删除语句： delete from 表名 where 条件//比如：name = luxp 如： 3.修改语句： update 表名 set 字段1 = “值”，字段2 = “值” where 条件//比如： update stu">
+<meta property="og:type" content="article">
 <meta property="og:title" content="SQL数据库的基本操作">
 <meta property="og:url" content="http://yoursite.com/2017/11/21/SQL数据库的基本操作/index.html">
 <meta property="og:site_name" content="南城菇凉@博客">
+<meta property="og:description" content="CURD操作/增删改查 1.插入语句： insert into 表名（表的字段1，表的字段2）values(字段1的值，字段2的值)；//字符串类型的加上引号 如： 2.删除语句： delete from 表名 where 条件//比如：name = luxp 如： 3.修改语句： update 表名 set 字段1 = “值”，字段2 = “值” where 条件//比如： update stu">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-11-21T12:47:04.000Z">
+<meta property="og:updated_time" content="2017-11-21T12:51:23.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SQL数据库的基本操作">
+<meta name="twitter:description" content="CURD操作/增删改查 1.插入语句： insert into 表名（表的字段1，表的字段2）values(字段1的值，字段2的值)；//字符串类型的加上引号 如： 2.删除语句： delete from 表名 where 条件//比如：name = luxp 如： 3.修改语句： update 表名 set 字段1 = “值”，字段2 = “值” where 条件//比如： update stu">
   
     <link rel="alternate" href="/atom.xml" title="南城菇凉@博客" type="application/atom+xml">
   
@@ -87,11 +90,53 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <p>CURD操作/增删改查</p>
+<p>1.插入语句：</p>
+<p>insert into 表名（表的字段1，表的字段2）values(字段1的值，字段2的值)；//字符串类型的加上引号</p>
+<p>如：</p>
+<p>2.删除语句：</p>
+<p>delete from 表名 where 条件//比如：<code>name</code> = <code>luxp</code></p>
+<p>如：</p>
+<p>3.修改语句：</p>
+<p>update 表名 set 字段1 = “值”，字段2 = “值” where 条件//比如： update student set age = 18 where name=’luxp’</p>
+<p>如：</p>
+<p>4.查询语句：</p>
+<p>(1).select 字段1，字段2.。。from 表名 where 条件</p>
+<p>limit 1:表示只查询记录中的一条</p>
+<p>limit 5:表示查询5条</p>
+<p>limit start,size 从第start位置查询size条</p>
+<p>如：</p>
+<p>(2).带查询限制的查询语句</p>
+<p>select 字段 from 表名 where 条件 limit start,size</p>
+<p>排序 order by</p>
+<p>desc 根据字段的值 降序</p>
+<p>asc 根据字段的值 升序</p>
+<p>(3).带排序的查询语句</p>
+<p>select 字段(*) from 表名 order by 字段 desc/asc  limit start,size</p>
+<p>如：</p>
+<p>(4).分组统计查询</p>
+<p>select count(*) from 表名 //获得所有行数</p>
+<p>select count(*) as num from 表名 //将count结果作为一个字段名检索</p>
+<p>如：</p>
+<p>(5).分组 ground by 字段名 根据某个字段进行分组查询</p>
+<p>//索引可以提高查询速度</p>
+<p>//索引会降低插入，修改速度</p>
+<p>如：</p>
+<p>(6).求和 sum()</p>
+<p>select sum(age) from student //求所有行数的age字段的总和</p>
+<p>如：</p>
+<p>(7).求平均值 avg()</p>
+<p>select avg(age) from student//求年龄的平均值</p>
+<p>如：</p>
+<p>(8).查最大值max()与最小值min()</p>
+<p>select max(age) from student</p>
+<p>select min(age) from student</p>
+<p>如：</p>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/11/21/SQL数据库的基本操作/" data-id="cja9mc9ht0000074nzvqu28eo" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/11/21/SQL数据库的基本操作/" data-id="cja9mcvv200001g4n96c4o5yk" class="article-share-link">Share</a>
       
       
     </footer>
